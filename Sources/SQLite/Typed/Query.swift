@@ -22,8 +22,6 @@
 // THE SOFTWARE.
 //
 
-import Foundation
-
 public protocol QueryType : Expressible {
 
     var clauses: QueryClauses { get set }
