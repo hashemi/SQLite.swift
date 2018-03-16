@@ -4,7 +4,6 @@ import XCTest
 class SQLiteTestCase : XCTestCase {
     private var trace:[String: Int]!
     var db:Connection!
-    let users = Table("users")
 
     override func setUp() {
         super.setUp()
@@ -75,31 +74,6 @@ class SQLiteTestCase : XCTestCase {
 
 }
 
-let bool = Expression<Bool>("bool")
-let boolOptional = Expression<Bool?>("boolOptional")
-
-let data = Expression<Blob>("blob")
-let dataOptional = Expression<Blob?>("blobOptional")
-
-let date = Expression<Date>("date")
-let dateOptional = Expression<Date?>("dateOptional")
-
-let double = Expression<Double>("double")
-let doubleOptional = Expression<Double?>("doubleOptional")
-
-let int = Expression<Int>("int")
-let intOptional = Expression<Int?>("intOptional")
-
-let int64 = Expression<Int64>("int64")
-let int64Optional = Expression<Int64?>("int64Optional")
-
-let string = Expression<String>("string")
-let stringOptional = Expression<String?>("stringOptional")
-
-func AssertSQL(_ expression1: @autoclosure () -> String, _ expression2: @autoclosure () -> Expressible, file: StaticString = #file, line: UInt = #line) {
-    XCTAssertEqual(expression1(), expression2().asSQL(), file: file, line: line)
-}
-
 func AssertThrows<T>(_ expression: @autoclosure () throws -> T, file: StaticString = #file, line: UInt = #line) {
     do {
         _ = try expression()
@@ -108,11 +82,6 @@ func AssertThrows<T>(_ expression: @autoclosure () throws -> T, file: StaticStri
         XCTAssert(true, file: file, line: line)
     }
 }
-
-let table = Table("table")
-let qualifiedTable = Table("table", database: "main")
-let virtualTable = VirtualTable("virtual_table")
-let _view = View("view") // avoid Mac XCTestCase collision
 
 class TestCodable: Codable {
     let int: Int
