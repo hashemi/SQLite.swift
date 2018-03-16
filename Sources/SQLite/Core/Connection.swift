@@ -406,15 +406,11 @@ public final class Connection {
     ///
     ///       db.trace { SQL in print(SQL) }
     public func trace(_ callback: ((String) -> Void)?) {
-        #if os(Linux)
+        if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
+            trace_v2(callback)
+        } else {
             trace_v1(callback)
-        #else
-            if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
-                trace_v2(callback)
-            } else {
-                trace_v1(callback)
-            }
-        #endif
+        }
     }
 
     fileprivate func trace_v1(_ callback: ((String) -> Void)?) {
@@ -576,11 +572,9 @@ public final class Connection {
             }
         }
         var flags = SQLITE_UTF8
-        #if !os(Linux)
         if deterministic {
             flags |= SQLITE_DETERMINISTIC
         }
-        #endif
         sqlite3_create_function_v2(handle, function, Int32(argc), flags, unsafeBitCast(box, to: UnsafeMutableRawPointer.self), { context, argc, value in
             let function = unsafeBitCast(sqlite3_user_data(context), to: Function.self)
             function(context, argc, value)
@@ -717,7 +711,6 @@ extension String {
     }
 }
 
-#if !os(Linux)
 @available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *)
 extension Connection {
     fileprivate func trace_v2(_ callback: ((String) -> Void)?) {
@@ -751,4 +744,3 @@ extension Connection {
         trace = box
     }
 }
-#endif
