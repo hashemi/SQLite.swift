@@ -22,7 +22,6 @@
 // THE SOFTWARE.
 //
 
-import Foundation
 import Dispatch
 import SQLite3
 
@@ -342,7 +341,7 @@ public final class Connection {
     ///     The block must throw to roll the savepoint back.
     ///
     /// - Throws: `SQLite.Result.Error`, and rethrows.
-    public func savepoint(_ name: String = UUID().uuidString, block: () throws -> Void) throws {
+    public func savepoint(_ name: String, block: () throws -> Void) throws {
         let name = name.quote("'")
         let savepoint = "SAVEPOINT \(name)"
 
@@ -600,11 +599,11 @@ public final class Connection {
     ///
     ///   - block: A collation function that takes two strings and returns the
     ///     comparison result.
-    public func createCollation(_ collation: String, _ block: @escaping (_ lhs: String, _ rhs: String) -> ComparisonResult) throws {
+    public func createCollation(_ collation: String, _ block: @escaping (_ lhs: String, _ rhs: String) -> Int32) throws {
         let box: Collation = { (lhs: UnsafeRawPointer, rhs: UnsafeRawPointer) in
             let lstr = String(cString: lhs.assumingMemoryBound(to: UInt8.self))
             let rstr = String(cString: rhs.assumingMemoryBound(to: UInt8.self))
-            return Int32(block(lstr, rstr).rawValue)
+            return block(lstr, rstr)
         }
         try check(sqlite3_create_collation_v2(handle, collation, SQLITE_UTF8,
             unsafeBitCast(box, to: UnsafeMutableRawPointer.self),
