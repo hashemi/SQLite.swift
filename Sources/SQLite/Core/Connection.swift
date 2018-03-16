@@ -705,6 +705,19 @@ extension Result : CustomStringConvertible {
     }
 }
 
+// let SQLITE_STATIC = unsafeBitCast(0, sqlite3_destructor_type.self)
+let SQLITE_TRANSIENT = unsafeBitCast(-1, to: sqlite3_destructor_type.self)
+
+extension String {
+    
+    func quote(_ mark: Character = "\"") -> String {
+        let escaped = reduce("") { string, character in
+            string + (character == mark ? "\(mark)\(mark)" : "\(character)")
+        }
+        return "\(mark)\(escaped)\(mark)"
+    }
+}
+
 #if !os(Linux)
 @available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *)
 extension Connection {

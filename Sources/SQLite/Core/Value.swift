@@ -31,7 +31,7 @@ public protocol Binding {}
 
 public protocol Number : Binding {}
 
-public protocol Value : Expressible { // extensions cannot have inheritance clauses
+public protocol Value {
 
     associatedtype ValueType = Self
 
