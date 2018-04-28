@@ -8,25 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		03A65E641C6BB0F60062603F /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A65E5A1C6BB0F50062603F /* SQLite.framework */; };
-		03A65E761C6BB2E60062603F /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AEE1C3F06E900AE3E12 /* Blob.swift */; };
-		03A65E771C6BB2E60062603F /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AEF1C3F06E900AE3E12 /* Connection.swift */; };
-		03A65E7A1C6BB2F70062603F /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AF21C3F06E900AE3E12 /* Statement.swift */; };
-		03A65E7B1C6BB2F70062603F /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AF31C3F06E900AE3E12 /* Value.swift */; };
+		03A65E771C6BB2E60062603F /* SQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AEF1C3F06E900AE3E12 /* SQLite.swift */; };
 		03A65E881C6BB3030062603F /* BlobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247B1B1C3F137700AE3E12 /* BlobTests.swift */; };
 		03A65E891C6BB3030062603F /* ConnectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247B1D1C3F137700AE3E12 /* ConnectionTests.swift */; };
 		03A65E931C6BB3030062603F /* StatementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247B321C3F142E00AE3E12 /* StatementTests.swift */; };
 		03A65E951C6BB3030062603F /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247B161C3F127200AE3E12 /* TestHelpers.swift */; };
 		03A65E971C6BB3210062603F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A65E961C6BB3210062603F /* libsqlite3.tbd */; };
 		3D67B3E61DB2469200A4F4C6 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D67B3E51DB2469200A4F4C6 /* libsqlite3.tbd */; };
-		3D67B3E71DB246BA00A4F4C6 /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AEE1C3F06E900AE3E12 /* Blob.swift */; };
-		3D67B3E81DB246BA00A4F4C6 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AEF1C3F06E900AE3E12 /* Connection.swift */; };
-		3D67B3E91DB246D100A4F4C6 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AF21C3F06E900AE3E12 /* Statement.swift */; };
-		3D67B3EA1DB246D100A4F4C6 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AF31C3F06E900AE3E12 /* Value.swift */; };
+		3D67B3E81DB246BA00A4F4C6 /* SQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AEF1C3F06E900AE3E12 /* SQLite.swift */; };
 		EE247ADE1C3F04ED00AE3E12 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE247AD31C3F04ED00AE3E12 /* SQLite.framework */; };
-		EE247B031C3F06E900AE3E12 /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AEE1C3F06E900AE3E12 /* Blob.swift */; };
-		EE247B041C3F06E900AE3E12 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AEF1C3F06E900AE3E12 /* Connection.swift */; };
-		EE247B071C3F06E900AE3E12 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AF21C3F06E900AE3E12 /* Statement.swift */; };
-		EE247B081C3F06E900AE3E12 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AF31C3F06E900AE3E12 /* Value.swift */; };
+		EE247B041C3F06E900AE3E12 /* SQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AEF1C3F06E900AE3E12 /* SQLite.swift */; };
 		EE247B171C3F127200AE3E12 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247B161C3F127200AE3E12 /* TestHelpers.swift */; };
 		EE247B231C3F137700AE3E12 /* BlobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247B1B1C3F137700AE3E12 /* BlobTests.swift */; };
 		EE247B251C3F137700AE3E12 /* ConnectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247B1D1C3F137700AE3E12 /* ConnectionTests.swift */; };
@@ -36,10 +27,7 @@
 		EE247B551C3F3FC700AE3E12 /* ConnectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247B1D1C3F137700AE3E12 /* ConnectionTests.swift */; };
 		EE247B5F1C3F3FC700AE3E12 /* StatementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247B321C3F142E00AE3E12 /* StatementTests.swift */; };
 		EE247B611C3F3FC700AE3E12 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247B161C3F127200AE3E12 /* TestHelpers.swift */; };
-		EE247B651C3F3FEC00AE3E12 /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AEE1C3F06E900AE3E12 /* Blob.swift */; };
-		EE247B661C3F3FEC00AE3E12 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AEF1C3F06E900AE3E12 /* Connection.swift */; };
-		EE247B691C3F3FEC00AE3E12 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AF21C3F06E900AE3E12 /* Statement.swift */; };
-		EE247B6A1C3F3FEC00AE3E12 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AF31C3F06E900AE3E12 /* Value.swift */; };
+		EE247B661C3F3FEC00AE3E12 /* SQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE247AEF1C3F06E900AE3E12 /* SQLite.swift */; };
 		EE9180941C46EA210038162A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EE9180931C46EA210038162A /* libsqlite3.tbd */; };
 		EE9180951C46EBCC0038162A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EE9180911C46E9D30038162A /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
@@ -78,10 +66,7 @@
 		EE247AD81C3F04ED00AE3E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE247ADD1C3F04ED00AE3E12 /* SQLiteTests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SQLiteTests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE247AE41C3F04ED00AE3E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE247AEE1C3F06E900AE3E12 /* Blob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blob.swift; sourceTree = "<group>"; };
-		EE247AEF1C3F06E900AE3E12 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
-		EE247AF21C3F06E900AE3E12 /* Statement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statement.swift; sourceTree = "<group>"; };
-		EE247AF31C3F06E900AE3E12 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
+		EE247AEF1C3F06E900AE3E12 /* SQLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLite.swift; sourceTree = "<group>"; };
 		EE247B161C3F127200AE3E12 /* TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		EE247B1B1C3F137700AE3E12 /* BlobTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlobTests.swift; sourceTree = "<group>"; };
 		EE247B1D1C3F137700AE3E12 /* ConnectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionTests.swift; sourceTree = "<group>"; };
@@ -219,10 +204,7 @@
 		EE247AED1C3F06E900AE3E12 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				EE247AEE1C3F06E900AE3E12 /* Blob.swift */,
-				EE247AEF1C3F06E900AE3E12 /* Connection.swift */,
-				EE247AF21C3F06E900AE3E12 /* Statement.swift */,
-				EE247AF31C3F06E900AE3E12 /* Value.swift */,
+				EE247AEF1C3F06E900AE3E12 /* SQLite.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -538,10 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03A65E761C6BB2E60062603F /* Blob.swift in Sources */,
-				03A65E7B1C6BB2F70062603F /* Value.swift in Sources */,
-				03A65E7A1C6BB2F70062603F /* Statement.swift in Sources */,
-				03A65E771C6BB2E60062603F /* Connection.swift in Sources */,
+				03A65E771C6BB2E60062603F /* SQLite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,10 +539,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D67B3E91DB246D100A4F4C6 /* Statement.swift in Sources */,
-				3D67B3EA1DB246D100A4F4C6 /* Value.swift in Sources */,
-				3D67B3E71DB246BA00A4F4C6 /* Blob.swift in Sources */,
-				3D67B3E81DB246BA00A4F4C6 /* Connection.swift in Sources */,
+				3D67B3E81DB246BA00A4F4C6 /* SQLite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,10 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE247B031C3F06E900AE3E12 /* Blob.swift in Sources */,
-				EE247B041C3F06E900AE3E12 /* Connection.swift in Sources */,
-				EE247B081C3F06E900AE3E12 /* Value.swift in Sources */,
-				EE247B071C3F06E900AE3E12 /* Statement.swift in Sources */,
+				EE247B041C3F06E900AE3E12 /* SQLite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,10 +566,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE247B651C3F3FEC00AE3E12 /* Blob.swift in Sources */,
-				EE247B6A1C3F3FEC00AE3E12 /* Value.swift in Sources */,
-				EE247B691C3F3FEC00AE3E12 /* Statement.swift in Sources */,
-				EE247B661C3F3FEC00AE3E12 /* Connection.swift in Sources */,
+				EE247B661C3F3FEC00AE3E12 /* SQLite.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
